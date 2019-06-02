@@ -1,20 +1,18 @@
-spring:
-  application:
-    name: news-service
-  cloud:
-    discovery:
-      enabled: true
-    config:
-      discovery:
-        service-id: cloud-config-server
-        enabled: true
-
 server:
   port: 0
 
 service:
   instance:
     name:
+
+spring:
+  application:
+    name: news-service
+  cloud:
+    config:
+      discovery:
+        service-id: cloud-config-server
+        enabled: true
 
 eureka:
   client:
