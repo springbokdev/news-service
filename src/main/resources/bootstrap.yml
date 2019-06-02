@@ -6,6 +6,7 @@ spring:
       enabled: true
     config:
       discovery:
+        service-id: cloud-config-server
         enabled: true
 
 server:
