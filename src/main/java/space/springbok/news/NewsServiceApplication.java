@@ -22,8 +22,8 @@ public class NewsServiceApplication {
     @Value("${service.instance.name}")
     private String instance;
 
-    @Value("${some.other.property}")
-    private String someOtherProperty;
+//    @Value("${some.other.property}")
+//    private String someOtherProperty;
 
     public static void main(String[] args) {
         SpringApplication.run(NewsServiceApplication.class, args);
@@ -37,11 +37,11 @@ public class NewsServiceApplication {
     @RequestMapping("/printConfig")
     public String printConfig() {
         StringBuilder sb = new StringBuilder();
-        sb.append(properties.getProperty());
-        sb.append(" || ");
-        sb.append(instance);
-        sb.append(" || ");
-        sb.append(someOtherProperty);
+//        sb.append(properties.getProperty());
+//        sb.append(" || ");
+//        sb.append(instance);
+//        sb.append(" || ");
+//        sb.append(someOtherProperty);
 
         return sb.toString();
     }
