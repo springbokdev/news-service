@@ -11,8 +11,9 @@ spring:
   cloud:
     config:
       discovery:
-        service-id: cloud-config-server
         enabled: true
+        service-id: cloud-config-server
+      fail-fast: true
       retry:
         initialInterval: 2000
         multiplier: 1.5
