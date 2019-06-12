@@ -5,14 +5,15 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
  */
-@EnableDiscoveryClient
 @SpringBootApplication
+@EnableDiscoveryClient
 @RestController
 public class NewsServiceApplication {
 
@@ -22,8 +23,8 @@ public class NewsServiceApplication {
     @Value("${service.instance.name}")
     private String instance;
 
-//    @Value("${some.other.property}")
-//    private String someOtherProperty;
+    @Value("${some.other.property}")
+    private String someOtherProperty;
 
     public static void main(String[] args) {
         SpringApplication.run(NewsServiceApplication.class, args);
@@ -37,11 +38,11 @@ public class NewsServiceApplication {
     @RequestMapping("/printConfig")
     public String printConfig() {
         StringBuilder sb = new StringBuilder();
-//        sb.append(properties.getProperty());
-//        sb.append(" || ");
-//        sb.append(instance);
-//        sb.append(" || ");
-//        sb.append(someOtherProperty);
+        sb.append(properties.getProperty());
+        sb.append(" || ");
+        sb.append(instance);
+        sb.append(" || ");
+        sb.append(someOtherProperty);
 
         return sb.toString();
     }
