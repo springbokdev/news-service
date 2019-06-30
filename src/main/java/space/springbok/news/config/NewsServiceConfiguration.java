@@ -1,4 +1,4 @@
-package space.springbok.news;
+package space.springbok.news.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
